@@ -1,0 +1,13 @@
+def meeting(s):
+    s = (s.upper()).split(';')
+    s = list(map(lambda i: ', '.join(i.split(':')[::-1]), s))
+    s = list(map(lambda i: '('+i+')', s))
+    sorted_s = sorted(s)
+    return(''.join(sorted_s))
+def main():
+    arr = "Fired:Corwill;Wilfred:Corwill;Barney:TornBull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill"
+    print(f'Input array: \n{arr}\nOutput array:')
+    print(meeting(arr))
+    
+if __name__ == "__main__":
+    main()
