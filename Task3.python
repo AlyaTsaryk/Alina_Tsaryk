@@ -1,0 +1,18 @@
+def digital_root(n):
+    while len(str(n)) != 1:
+        n = sum([int(x) for x in list(str(n))])
+    return n   
+
+def main():
+    n1 = 14
+    n2 = 5
+    n3 = 1578
+    n4 = 139
+    print(f'Input numbers \n{n1}\n{n2}\n{n3}\n{n4}\nOutput digital roots:')
+    print(digital_root(n1))
+    print(digital_root(n2))
+    print(digital_root(n3))
+    print(digital_root(n4))
+    
+if __name__ == "__main__":
+    main()
