@@ -1,0 +1,12 @@
+def filter_list(l):    
+    return(list(filter(lambda x: type(x) != str, l)))
+
+def main():
+    arr1 = [1, 2, 'a', 'b', 3]
+    arr2 = [1, '2', 'aaa', 'baa', 20]
+    print(f'Input arrays: \n{arr1}\n{arr2}\nOutput arrays:')
+    print(filter_list(arr1))
+    print(filter_list(arr2))
+    
+if __name__ == "__main__":
+    main()
