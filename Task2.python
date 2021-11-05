@@ -1,0 +1,17 @@
+def first_non_repeating_letter(string):
+    list1 = (list(string.lower()))
+    list2 = list(filter(lambda x: list1.count(x) == 1, list1 ))
+    if not list2: return ''
+    return(string[list1.index(list2[0])])
+def main():
+    w1 = 'stress'
+    w2 = 'sTreSS'
+    w3 = 'abcabc'
+    print(f'Input words: \n{w1}\n{w2}\n{w3}\nOutput letters:')
+    print(first_non_repeating_letter(w1))
+    print(first_non_repeating_letter(w2))
+    print(first_non_repeating_letter(w3))
+    
+    
+if __name__ == "__main__":
+    main()
