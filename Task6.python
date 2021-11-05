@@ -1,0 +1,22 @@
+import numpy as np
+def next_bigger(num):
+    n = list(map(int, str(num)))
+    for i in reversed(range(1, len(n))):
+        if(n[i]>n[i-1]):
+            n__=list(filter(lambda x: x > n[i-1], n[i:]))
+            n[i-1], n[np.argmin(n__)+i]=min(n__), n[i-1]
+            n1 = sorted(n[i:])
+            n2 = n[:i]
+            return int(''.join([str(x) for x in(n2+n1)]))
+    return -1       
+
+def main():
+    n1, n2, n3, n4 = 12, 2017, 237410, 111
+    print(f'Input numbers \n{n1}\n{n2}\n{n3}\n{n4}\nOutput next bigger numbers:')
+    print(next_bigger(n1))             
+    print(next_bigger(n2)) 
+    print(next_bigger(n3)) 
+    print(next_bigger(n4))
+    
+if __name__ == "__main__":
+    main()
