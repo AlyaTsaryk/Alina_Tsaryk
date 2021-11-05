@@ -1,0 +1,12 @@
+def int32_to_ip(int32):
+    return ".".join(map(lambda x: str(int32>>x & 0xFF), [24,16,8,0]))
+
+def main():
+    n1, n2, n3 = 2149583361, 32, 0
+    print(f'Input numbers: \n{n1}\n{n2}\n{n3}\nOutput IPv4 addresses:')
+    print(int32_to_ip(n1))
+    print(int32_to_ip(n2))
+    print(int32_to_ip(n3))
+    
+if __name__ == "__main__":
+    main()
