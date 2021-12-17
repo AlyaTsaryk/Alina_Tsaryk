@@ -26,8 +26,6 @@ class OrangeTesting(BasePage):
     def check_user(self, username):
         return username in self.driver.page_source
 
-    def check_del_user(self, username):
-        return username not in self.driver.page_source
 
     def find_user(self, username):
         self.find_element(By.NAME, "searchSystemUser[userName]").send_keys(username)
