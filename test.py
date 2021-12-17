@@ -24,7 +24,7 @@ def test_find_user(browser):
 def test_delete_user(browser):
     orange_page = OrangeTesting(browser)
     orange_page.delete_user(username)
-    assert orange_page.check_del_user(username)
+    assert not orange_page.check_user(username)
 
 
 
