@@ -44,3 +44,8 @@ def test_del_file():
         "path": "/webapi26_testing"+file1,
     }
     assert "/webapi26_testing"+file1 in requests.post("https://api.dropboxapi.com/2/files/delete_v2", headers=headers, json=data3).text
+    
+ 
+test_upload_file()
+test_get_data()
+test_del_file()
